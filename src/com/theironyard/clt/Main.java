@@ -11,6 +11,9 @@ public class Main {
 	// write your code here
         HashMap<String, ArrayList<Country>> map = new HashMap<>();
         System.out.println("Please enter a letter for the search.");
-        
+        Scanner consoleScanner = new Scanner(System.in);
+        Scanner fileScanner = new Scanner("countries.txt");
+        String line = fileScanner.nextLine();
+        String[] columns = line.split("\\|");
     }
 }
