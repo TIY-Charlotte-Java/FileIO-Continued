@@ -13,7 +13,12 @@ public class Main {
         System.out.println("Please enter a letter for the search.");
         Scanner consoleScanner = new Scanner(System.in);
         Scanner fileScanner = new Scanner("countries.txt");
-        String line = fileScanner.nextLine();
-        String[] columns = line.split("\\|");
+        while (fileScanner.hasNext()) {
+            String line = fileScanner.nextLine();
+            String[] columns = line.split("\\|");
+        }
+
+
+
     }
 }
