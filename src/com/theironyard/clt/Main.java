@@ -20,6 +20,7 @@ public class Main {
 
             String line = fileScanner.nextLine();
             String[] columns = line.split("\\|");
+            Country section = new Country(columns[0], columns[1]);
 
         }
 
