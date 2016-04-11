@@ -10,12 +10,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args)throws IOException, FileNotFoundException{
         // write your code here
         HashMap<String, ArrayList<Country>> map = new HashMap<>();
         System.out.println("Please enter a letter for the search.");
 
-        Scanner fileScanner = new Scanner("countries.txt");
+        File f = new File("countries.txt");
+        Scanner fileScanner = new Scanner(f);
 
         String key = null;
         while (fileScanner.hasNext()) {
@@ -35,10 +36,14 @@ public class Main {
         String letter = consoleScanner.nextLine().toUpperCase();
 
 
-        File f = new File("%s_.txt", letter);
+        File g = new File(String.format("%s_.txt", letter));
 
-        FileWriter fw = new FileWriter(f);
+        FileWriter fw = new FileWriter(g);
 
-        fw.write(map.get(letter));
+        fw.write(map.get(letter).toString());
+
+        fw.close();
+
+        System.out.println("thank you and goodbye!");
     }
 }
