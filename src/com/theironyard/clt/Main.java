@@ -35,7 +35,6 @@ public class Main {
         Scanner consoleScanner = new Scanner(System.in);
         String letter = consoleScanner.nextLine().toUpperCase();
 
-
         File g = new File(String.format("%s_.txt", letter));
 
         FileWriter fw = new FileWriter(g);
